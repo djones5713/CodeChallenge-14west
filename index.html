@@ -133,33 +133,47 @@
     </body>
 
     <script type="text/javascript">
+        // create a change event on the input that has a type of checked and a value of Yes
        $("input[value='Yes'][type='checkbox']").change(function(){
+           // add / remove status based on matched elements using jquery .prop()
            $("input[value='Yes'][type='checkbox']").prop("checked",$(this).prop("checked"));
        })
 
        function countDown()
        {
+           // get current date info using javascript new Date() function 
            var today = new Date();
+           // set end date info using javascript new Date() function 
            var eventDate = new Date("October 15,2019 00:00:00");
 
+            // get current time using javascript getTime() function
            var currentTime = today.getTime();
            var eventTime = eventDate.getTime();
 
+            // create a new variable that subtracts current date from end date
            var remTime = eventTime - currentTime;
 
+            // round down after dividing variable using Math.floor
+            // Milaseconds in seconds 
            var sec = Math.floor(remTime/1000);
+           // Seconds in minutes 
            var min = Math.floor(sec/60);
+           // Minutes in hours 
            var hrs = Math.floor(min/60);
+           // Hours in days 
            var days = Math.floor(hrs/24);
 
+           // modulus remainder 
            hrs = hrs % 24;
            min%=60;
            sec%=60;
 
+          // number is less than 10 concat 0 on variable 
            hrs = (hrs<10) ? "0"+hrs : hrs;
            min = (min<10) ? "0"+min : min;
            sec = (sec<10) ? "0"+sec : sec;
 
+          // getElement my Id and set it to javascript variable
             document.getElementById("days").innerHTML = days;
             document.getElementById("hrs").innerHTML = hrs ;
             document.getElementById("min").innerHTML = min ;
@@ -170,34 +184,52 @@
 
        countDown()
 
+       // request data from a web server using AJAX
         var request = new XMLHttpRequest()
 
        $("button").on("click", function(){
+           // if statement to determine if checkbox has a length equal to 0 
            if($(".test:checked").length == 0){
+               // if so create an alert function to user to checkbox to proceed
                alert("Please check the checkbox before proceeding")
            } else{
+            // set http link to const 
             const Url = 'https://bl45immth4.execute-api.us-east-1.amazonaws.com/production/';
+
+              // create a click event that gets data from api endpoint 
             $("#button-top").click(function(){
                 $.get(Url, function(result){
                     console.log(result.body)
+                      // change json file to object and set it to a variable
                     var obj = JSON.parse(result.body)
+
+                     // Change data to from json to object
                     console.log("TEST", JSON.parse(result.body))
 
+                    // display data from api on HTML document using id
                     var message = document.getElementById('message');
 
+                     // using dot notation to get the value off of property 
                     message.innerHTML = obj.submitok
                    
                 })
             })
 
+            // create a click event that gets data from api endpoint 
             $("#button-bottom").click(function(){
                 $.get(Url, function(result){
                     console.log(result.body)
+
+                    // change json file to object and set it to a variable
                     var obj = JSON.parse(result.body)
+
+                    // Change data to from json to object
                     console.log("TEST", JSON.parse(result.body))
 
+                    // display data from api on HTML document using id
                     var message = document.getElementById('message-1');
 
+                    // using dot notation to get the value off of property 
                     message.innerHTML = obj.submitok
                    
                 })
