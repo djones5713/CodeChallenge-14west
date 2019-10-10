@@ -1,0 +1,187 @@
+<! doctype html>
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <title></title>
+        <meta name="description" content="Best-Selling Author and Gold Expert Jim Rickards">
+        <meta name="author" content="Destiny Jones">
+        <link rel="stylesheet" href="./index.css" >
+    </head>
+    <body>
+        <h3>Best-Selling Author and Gold Expert <br /> Jim Rickards’ Presents…</h3>
+        <hr />
+        <div id="header-content">
+            <h1>“In just days a Never-Before- Seen Gold Anomaly 
+                Will Create a Totally New Class of Penny Gold Stocks...</h1>
+            <h1>I’ve Enlisted One of the World’s Top Geologists 
+                to Help Me Reveal... Live on Camera… What This 
+                Coming <span>Gold Mega-Catalyst</span> Is And How You Could Make 
+                as Much as <span>$101,000 in Profit.</span>”</h1>
+        </div>
+        <div>
+        <div id="newletter-checkbox-1">
+            <input type="checkbox" id="newletter 1" name="newletter" class="test" value="Yes">
+            <label for="newletter">I would like to receive a free newsletter</label>
+        </div>
+        <button id="button-top">Register for this FREE <br/>live Webinar Here!</button>
+
+            <div id="top">
+
+                <div id="top-left">
+                    <img src="https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RGS/RGS_Hotlist_0617/RGS_Hotlist_0617_Calendar.png" alt="calendar" id="calendar-icon"/>
+                    <p id="calendar-info"><span id="calendar-date">May 29th</span> <br/> at 5:00 PM EDT</p>
+                </div>
+                <div id="top-right">
+                    <p>TIME LEFT UNTIL THE WEBINAR STARTS...</p>
+                    <table class="container">
+                        <tr class="info">
+                            <td id="days"></td>
+                            <td id="hrs"></td>
+                            <td id="min"></td>
+                            <td id="sec"></td>
+                        </tr>
+                        <tr class="info-label">
+                            <td>Days</td>
+                            <td>Hours</td>
+                            <td>Minutes</td>
+                            <td>Seconds</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            <div id="bottom">
+                <div id="bottom-left">
+                    <img src="https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RGS/RGS_Hotlist_0617/RGS_Hotlist_0617_JimRickards.png" alt="James G. Rickards" id="James"/>
+                    <p>Presented by best-selling author and gold expert…</p>
+                    <h2>JAMES G. RICKARDS</h2>
+                </div>
+                <div  id="bottom-right">
+                    <p  id="bottom-right-line">I’m going to show you…</p>
+                    <div>
+
+                        <div id="check-info">
+                            <img src="https://d13p2xj50zkyqm.cloudfront.net/promos_1/AF/RGS/RGS_Hotlist_0617/RGS_Hotlist_0617_CheckmarkBox.png" alt="checkmark"/>
+                            <p>How a class of “off-limit” gold stocks could become
+                             fair game and shoot up in price…</p>
+                        </div>
+
+                    </div>
+                    <div>
+
+                        <div id="check-info">
+                            <img src="https://d13p2xj50zkyqm.cloudfront.net/promos_1/AF/RGS/RGS_Hotlist_0617/RGS_Hotlist_0617_CheckmarkBox.png" alt="checkmark"/>
+                            <p>Why just as many gold stocks could be CRUSHED. But this 
+                            isn’t a bad thing. In fact, it’s going to open up a unique 
+                            opportunity not seen in years…</p>
+                        </div>
+
+                    </div>
+                    <div>
+
+                        <div id="check-info">
+                            <img src="https://d13p2xj50zkyqm.cloudfront.net/promos_1/AF/RGS/RGS_Hotlist_0617/RGS_Hotlist_0617_CheckmarkBox.png" alt="checkmark"/>
+                            <p>How it could compound an announcement from the Federal 
+                            Reserve next week that could send physical gold prices much 
+                            higher…</p>
+                        </div>
+
+                    </div>
+                    <div>
+                        
+                        <div id="check-info">
+                            <img src="https://d13p2xj50zkyqm.cloudfront.net/promos_1/AF/RGS/RGS_Hotlist_0617/RGS_Hotlist_0617_CheckmarkBox.png" alt="checkmark"/>
+                            <p>Why you’ll hear predictions of doom for the gold market (it’s
+                            important you understand the truth and know the real profit opportunity
+                            that’s being set up)...</p>
+                        </div>
+
+                    </div>
+                    <div>
+
+                        <div id="check-info">
+                            <img src="https://d13p2xj50zkyqm.cloudfront.net/promos_1/AF/RGS/RGS_Hotlist_0617/RGS_Hotlist_0617_CheckmarkBox.png" alt="checkmark"/>
+                           <p>Why we may see confirmation that gold will make a run at $2,000 sooner
+                            than anyone thinks...</p>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div id="warning">
+                <p>WARNING: SPACE IS LIMITED & THESE LIVE TRAININGS ALWAYS FILL UP</p>
+            </div>
+            <div id="marketing-tag">
+                <p>Claim your spot below before it's too late!</p>
+            </div>
+
+            <div id="triangle">
+                </div>
+            
+            <div id="newletter-checkbox-2">
+                <input type="checkbox" id="newletter 2" name="newletter" class="test" value="Yes">
+                <label for="newletter">I would like to receive a free newsletter</label>
+            </div>
+            
+            <button id="button-bottom">YES! Reserve My Spot Now! >></button>
+            
+        </div>
+    </body>
+
+    <script type="text/javascript">
+       $("input[value='Yes'][type='checkbox']").change(function(){
+           $("input[value='Yes'][type='checkbox']").prop("checked",$(this).prop("checked"));
+       })
+
+       function countDown()
+       {
+           var today = new Date();
+           var eventDate = new Date("October 15,2019 00:00:00");
+
+           var currentTime = today.getTime();
+           var eventTime = eventDate.getTime();
+
+           var remTime = eventTime - currentTime;
+
+           var sec = Math.floor(remTime/1000);
+           var min = Math.floor(sec/60);
+           var hrs = Math.floor(min/60);
+           var days = Math.floor(hrs/24);
+
+           hrs = hrs % 24;
+           min%=60;
+           sec%=60;
+
+           hrs = (hrs<10) ? "0"+hrs : hrs;
+           min = (min<10) ? "0"+min : min;
+           sec = (sec<10) ? "0"+sec : sec;
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hrs").innerHTML = hrs ;
+            document.getElementById("min").innerHTML = min ;
+            document.getElementById("sec").innerHTML = sec ;
+
+            setTimeout(countDown, 1000);
+       }
+
+       countDown()
+
+        var request = new XMLHttpRequest()
+
+       $("button").on("click", function(){
+           if($(".test:checked").length == 0){
+               alert("Please check the checkbox before proceeding")
+           } else {
+            const Url = 'https://bl45immth4.execute-api.us-east-1.amazonaws.com/production/';
+            $("button").click(function(){
+                $.getJSON(Url, function(result){
+                    console.log(result)
+                })
+            })
+           }
+       })
+    </script>
+</html>
