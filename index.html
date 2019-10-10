@@ -25,7 +25,7 @@
             <label for="newletter">I would like to receive a free newsletter</label>
         </div>
         <button id="button-top">Register for this FREE <br/>live Webinar Here!</button>
-
+            <p id="message"></p>
             <div id="top">
 
                 <div id="top-left">
@@ -127,6 +127,7 @@
             </div>
             
             <button id="button-bottom">YES! Reserve My Spot Now! >></button>
+            <p id="message-1"></p>
             
         </div>
     </body>
@@ -174,14 +175,35 @@
        $("button").on("click", function(){
            if($(".test:checked").length == 0){
                alert("Please check the checkbox before proceeding")
-           } else {
+           } else{
             const Url = 'https://bl45immth4.execute-api.us-east-1.amazonaws.com/production/';
-            $("button").click(function(){
-                $.getJSON(Url, function(result){
-                    console.log(result)
+            $("#button-top").click(function(){
+                $.get(Url, function(result){
+                    console.log(result.body)
+                    var obj = JSON.parse(result.body)
+                    console.log("TEST", JSON.parse(result.body))
+
+                    var message = document.getElementById('message');
+
+                    message.innerHTML = obj.submitok
+                   
+                })
+            })
+
+            $("#button-bottom").click(function(){
+                $.get(Url, function(result){
+                    console.log(result.body)
+                    var obj = JSON.parse(result.body)
+                    console.log("TEST", JSON.parse(result.body))
+
+                    var message = document.getElementById('message-1');
+
+                    message.innerHTML = obj.submitok
+                   
                 })
             })
            }
+
        })
     </script>
 </html>

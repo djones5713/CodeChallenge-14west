@@ -67,6 +67,11 @@ label {
    
 }
 
+#message {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
 #button-bottom {
     text-align: center;
     width: 250px;
@@ -80,6 +85,11 @@ label {
     color: white;
     padding: 10px;
     
+ }
+
+ #message-1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
  }
 
 #top-left {
